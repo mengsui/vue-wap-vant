@@ -15,15 +15,24 @@
 <script>
 export default {
   data() {
-    return {
-      value: '哈哈'
-    }
-  },
 
+    return {
+      value: '哈哈',
+    };
+  },
+  mounted(){
+    console.log('交集');
+    var arr1 = [1,3,4,5,6];
+    var arr2 = [2,5];
+    var arr = arr1.filter(item => {
+      return !arr2.includes(item);
+    });
+    console.log(arr)
+  },
   methods: {
     onSearch(event) {
-      console.log(event)
-    }
+      console.log(event);
+    },
   }
 };
 </script>
